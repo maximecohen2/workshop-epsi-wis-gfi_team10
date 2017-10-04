@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Fiche client</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <style>
+   body {
+   background-color:#0A0A2A;
+ }
+</style>
+  <body>
+  
+          <?php
+			include("Connexion.php");
+		?>
+
+      <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          </div>
+          <div class="col-sm-4 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand"><img src="D:/EPSI/Workshop/gfi.png" alt="logo" width="50" /><FONT color="orange">Fiche Client</FONT></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+
+      <form class="form-signin">
+        <label for="inputDate" class="sr-only">Date</label>
+        <input type="text" name="date" id="inputDate" value="<?php echo date('Y-m-d'); ?>" class="form-control" placeholder="Date" required autofocus>
+		
+        <label for="inputClient" class="sr-only">Client</label>
+        <input type="text" name="client" id="inputClient" class="form-control" placeholder="Client" required>
+		
+		<label for="inputContactName" class="sr-only">ContactName</label>
+        <input type="text" name="contact" id="inputContactName" class="form-control" placeholder="Contact Name" required>
+		
+		<label for="inputTitle" class="sr-only">Title</label>
+        <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title" required>
+		
+		<label for="inputFullDescr" class="sr-only">Full Description</label>
+        <input type="text" name="description" id="inputFullDescr" class="form-control" placeholder="Full Description" required>
+		
+		<label for="inputKeys" class="sr-only">3 main key success factors</label>
+        <input type="text" name="mainkeys" id="inputKeys" class="form-control" placeholder="3 main key succes factors" required>    
+		
+		<label for="inputDuration" class="sr-only">Duration</label>
+        <input type="text" name="duration" id="inputDuration" class="form-control" placeholder="Duration" required>
+		
+		<label for="inputStart" class="sr-only">Start at the location</label>
+        <input type="text" name="start" id="inputStart" class="form-control" placeholder="Start at the location" required>
+		
+		<label for="inputLocation" class="sr-only">Location</label>
+        <input type="text" name="location" id="inputLocation" class="form-control" placeholder="Location" required>
+		
+		<label for="inputRate" class="sr-only">Rate</label>
+        <input type="text" name="rate" id="inputRate" class="form-control" placeholder="Rate (&euro; HT)" required>
+		
+		<label for="inputDescrFile" class="sr-only">Descr File</label>
+        <input type="text" name="file" id="inputDescrFile" class="form-control" placeholder="Description file" required>
+		
+		<label for="inputConsName" class="sr-only">ConsName</label>
+        <input type="text" name="name" id="inputConsName" class="form-control" placeholder="Consultant Name" required>
+		
+		<label for="inputStatus" class="sr-only">Status</label>
+        <input type="text" name="status" id="inputStatus" class="form-control" placeholder="Status" required>
+		
+		<input type="radio" name="Open" value="1"><FONT color="orange">Open</FONT>
+		<input type="radio" name="Win" value="2"><FONT color="green">Win</FONT>
+		<input type="radio" name="Lose" value="3"><FONT color="red">Lose</FONT>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Save & Share</button>
+      </form>
+	  
+	  <?php 
+		$Date = $_POST['date']; 
+		$Client = $_POST['client']; 
+		$ContactName = $_POST['contact']; 	
+		$Title = $_POST['title'];
+		$FullDescr = $_POST['description'];
+		$MainKeys = $_POST['mainkeys'];
+		$Duration = $_POST['duration'];
+		$Start = $_POST['start'];
+		$Location = $_POST['location'];
+		$Rate = $_POST['rate'];
+		$DescrFile = $_POST['file'];
+		$ConsName = $_POST['name'];
+		$Status = $_POST['status'];
+		
+		
+		?> 
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
