@@ -5,7 +5,8 @@
 # @Project: Snake
 # @Filename: list.php
 # @Last modified by:   maxime
-# @Last modified time: 2017-Oct-04 12:54
+# @Last modified time: 2017-Oct-04 18:00
+require "./models/model_list.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
     <!-- Custom styles for this template -->
     <link href="./css/album.css" rel="stylesheet">
 
-	<link href="./css/bootstrap-table.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/dataTables.bootstrap4.min.css"/>
   </head>
 
   <body>
@@ -48,25 +49,28 @@
     </div>
 
     <section class="jumbotron">
-      	<div class="container">
-			<div class="input-group">
-	 	  		<input type="text" class="form-control" placeholder="Search for...">
-	 			<span class="input-group-btn">
-	   				<button class="btn btn-secondary" type="button">Search</button>
-	 			</span>
-   			</div>
-		</div>
 	  	<div class="container">
-		  	<div class="table-responsive py-3">
-			  	<table data-toggle="table" data-side-pagination="server" data-url="./tools/getData.php" class="table table-striped">
+		  	<div class="py-3">
+			  	<table id="table" class="table table-striped table-bordered">
 			    	<thead>
 			      		<tr>
-			        		<th data-field="statut">Statut</th>
-			        		<th data-field="titre">Titre</th>
-					        <th data-field="date">Date</th>
-							<th data-field="client">Client</th>
+			        		<th>Statut</th>
+			        		<th>Titre</th>
+					        <th>Date</th>
+							<th>Client</th>
 			      		</tr>
 			    	</thead>
+					<tbody>
+						<?php
+						foreach ($data as $line) {
+							echo "<tr>\n";
+							foreach ($line as $elem) {
+								echo "<td>".$elem."</td>\n";
+							}
+							echo "</tr>\n";
+						}
+						?>
+					</tbody>
 				</table>
 		  	</div>
 		</div>
@@ -89,6 +93,12 @@
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-	<script src="./js/bootstrap-table.min.js"></script>
+	<script src="./js/jquery.dataTables.min.js"></script>
+	<script src="./js/dataTables.bootstrap4.min.js"></script>
+	<script>
+	$(document).ready(function() {
+    $('#table').DataTable();
+	} );
+	</script>
   </body>
 </html>
