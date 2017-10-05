@@ -19,6 +19,7 @@
    body {
    background-color:#0A0A2A;
  }
+
 </style>
   <body>
   
@@ -46,7 +47,7 @@
     </div>
     <div class="navbar navbar-dark bg-dark">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand"><img src="D:/EPSI/Workshop/gfi.png" alt="logo" width="50" /><FONT color="orange">Fiche Client</FONT></a>
+        <a href="#" class="navbar-brand"><img src="D:/EPSI/Workshop/gfi.png" alt="logo" width="50" /><FONT color="orange">Fiche Client faite par _____</FONT></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,14 +71,18 @@
 		<label for="inputTitle" class="sr-only">Title</label>
         <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title" required>
 		
-		<label for="inputFullDescr" class="sr-only">Full Description</label>
-        <input type="text" name="description" id="inputFullDescr" class="form-control" placeholder="Full Description" required>
+		<textarea class="form-control" id="exampleTextarea" rows="5">Full Description</textarea>
+
+		<textarea class="form-control" id="exampleTextarea" rows="1">1st success key</textarea>
 		
-		<label for="inputKeys" class="sr-only">3 main key success factors</label>
-        <input type="text" name="mainkeys" id="inputKeys" class="form-control" placeholder="3 main key succes factors" required>    
+		<textarea class="form-control" id="exampleTextarea" rows="1">2nd success key</textarea>
+				
+		<textarea class="form-control" id="exampleTextarea" rows="1">3rd success key</textarea>
+		
+
 		
 		<label for="inputDuration" class="sr-only">Duration</label>
-        <input type="text" name="duration" id="inputDuration" class="form-control" placeholder="Duration" required>
+        <input type="text" name="duration" id="inputDuration" class="form-control" placeholder="Duration (months)  days/week" required>
 		
 		<label for="inputStart" class="sr-only">Start at the location</label>
         <input type="text" name="start" id="inputStart" class="form-control" placeholder="Start at the location" required>
@@ -89,17 +94,23 @@
         <input type="text" name="rate" id="inputRate" class="form-control" placeholder="Rate (&euro; HT)" required>
 		
 		<label for="inputDescrFile" class="sr-only">Descr File</label>
-        <input type="text" name="file" id="inputDescrFile" class="form-control" placeholder="Description file" required>
+        <input type="file" name="file" id="inputDescrFile" class="form-control" placeholder="Description file" required>
 		
-		<label for="inputConsName" class="sr-only">ConsName</label>
-        <input type="text" name="name" id="inputConsName" class="form-control" placeholder="Consultant Name" required>
+		<textarea class="form-control" id="exampleTextarea" rows="1">Consultant Name #1</textarea>
+
+		<textarea class="form-control" id="exampleTextarea" rows="1">Consultant Name #2</textarea>
 		
-		<label for="inputStatus" class="sr-only">Status</label>
-        <input type="text" name="status" id="inputStatus" class="form-control" placeholder="Status" required>
+		<textarea class="form-control" id="exampleTextarea" rows="1">Consultant Name #3</textarea>
 		
-		<input type="radio" name="Open" value="1"><FONT color="orange">Open</FONT>
-		<input type="radio" name="Win" value="2"><FONT color="green">Win</FONT>
-		<input type="radio" name="Lose" value="3"><FONT color="red">Lose</FONT>
+		<textarea class="form-control" id="exampleTextarea" rows="1">Consultant Name #4</textarea>
+		
+		<textarea class="form-control" id="exampleTextarea" rows="1">Consultant Name #5</textarea>
+
+		
+		<button class="btn btn-warning">Open</button>
+		<button class="btn btn-success">Win</button>
+		<button class="btn btn-danger">Lost</button>
+		
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Save & Share</button>
       </form>
 	  
